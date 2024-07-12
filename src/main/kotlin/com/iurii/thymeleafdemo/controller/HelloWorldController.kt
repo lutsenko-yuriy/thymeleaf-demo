@@ -1,9 +1,9 @@
 package com.iurii.thymeleafdemo.controller
 
-import jakarta.servlet.http.HttpServletRequest
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 @RequestMapping("/form")
@@ -15,15 +15,21 @@ class HelloWorldController {
     }
 
     @RequestMapping("/submit")
-    fun submitForm(request: HttpServletRequest, model: Model): String {
-        val message = request.getParameter("studentName")
+    fun submitForm(
+        @RequestParam("studentName") studentName: String,
+        model: Model
+    ): String {
+        val message = studentName
         model.addAttribute("message", message)
         return "helloworld"
     }
 
     @RequestMapping("/shout")
-    fun shoutForm(request: HttpServletRequest, model: Model): String {
-        val message = request.getParameter("studentName").uppercase()
+    fun shoutForm(
+        @RequestParam("studentName") studentName: String,
+        model: Model
+    ): String {
+        val message = studentName.uppercase()
         model.addAttribute("message", "Yo! $message")
         return "helloworld"
     }
