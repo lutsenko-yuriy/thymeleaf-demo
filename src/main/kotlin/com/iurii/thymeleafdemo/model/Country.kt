@@ -10,5 +10,8 @@ enum class Country(val code: String, val countryName: String) {
     JAPAN("Japan", "Japan"),
     USA("USA", "USA"),
     UKRAINE("Ukraine", "Ukraine"),
-    UK("UK", "UK")
+    UK("UK", "UK"),
+    MEXICO("Mexico", "Mexico"),
+    CHINA("China", "China"),
+    SOUTH_KOREA("South Korea", "South Korea"),
 }
