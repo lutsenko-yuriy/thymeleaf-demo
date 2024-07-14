@@ -4,5 +4,6 @@ data class Student(
     var firstName: String = "",
     var lastName: String = "",
     var country: Country? = null,
-    var programmingLanguage: ProgrammingLanguage? = null
+    var programmingLanguage: ProgrammingLanguage? = null,
+    var operatingSystems: List<OperatingSystem> = listOf()
 )

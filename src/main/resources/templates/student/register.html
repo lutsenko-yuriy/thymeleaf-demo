@@ -11,5 +11,7 @@
 The student is confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName} + ' from ' + ${student.country.countryName}" />
 <br>
 Favourite programming language: <span th:text="${student.programmingLanguage.langName}" />
+<br>
+Favourite Operating systems: <span th:text="${#strings.listJoin(student.operatingSystems, ', ')}" />
 </body>
 </html>

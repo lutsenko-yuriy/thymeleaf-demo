@@ -22,7 +22,17 @@
     <br><br>
     Favourite Programming Language:
 
-    <input type="radio" th:each="language: ${languages}" th:field="*{programmingLanguage}" th:value="${language}" th:text="${language.langName}" />
+    <input type="radio" th:field="*{programmingLanguage}"
+           th:each="language: ${languages}"
+           th:value="${language}"
+           th:text="${language.langName}" />
+    <br><br>
+
+    Favorite OS:
+    <input type="checkbox" th:field="*{operatingSystems}"
+           th:each="os: ${operatingSystems}"
+           th:value="${os}"
+           th:text="${os.osName}" />
     <br><br>
     <input type="submit" value="Submit">
 </form>
