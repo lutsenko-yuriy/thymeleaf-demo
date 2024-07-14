@@ -20,6 +20,10 @@
                 th:text="${country.countryName}" />
     </select>
     <br><br>
+    Favourite Programming Language:
+
+    <input type="radio" th:each="language: ${languages}" th:field="*{programmingLanguage}" th:value="${language}" th:text="${language.langName}" />
+    <br><br>
     <input type="submit" value="Submit">
 </form>
 </body>

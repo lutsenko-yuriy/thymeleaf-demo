@@ -1,6 +1,7 @@
 package com.iurii.thymeleafdemo.controller
 
 import com.iurii.thymeleafdemo.model.Country
+import com.iurii.thymeleafdemo.model.ProgrammingLanguage
 import com.iurii.thymeleafdemo.model.Student
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -13,11 +14,14 @@ class StudentController {
 
     val availableCountries = Country.entries.filter { it.countryName.length >= 4 }
 
+    val languages = ProgrammingLanguage.entries.filter { it.langName.length >= 4 }
+
     @RequestMapping(value = ["/", "/form"])
     fun showForm(model: Model): String {
         val student = Student()
         model.addAttribute("student", student)
         model.addAttribute("availableCountries", availableCountries)
+        model.addAttribute("languages", languages)
         return "student/form"
     }
 

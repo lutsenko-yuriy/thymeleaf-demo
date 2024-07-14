@@ -1,17 +1,17 @@
 package com.iurii.thymeleafdemo.model
 
-enum class Country(val code: String, val countryName: String) {
-    BRAZIL("Brazil", "Brazil"),
-    GERMANY("Germany", "Germany"),
-    RUSSIA("Russia", "Russia"),
-    SPAIN("Spain", "Spain"),
-    FRANCE("France", "France"),
-    ITALY("Italy", "Italy"),
-    JAPAN("Japan", "Japan"),
-    USA("USA", "USA"),
-    UKRAINE("Ukraine", "Ukraine"),
-    UK("UK", "UK"),
-    MEXICO("Mexico", "Mexico"),
-    CHINA("China", "China"),
-    SOUTH_KOREA("South Korea", "South Korea"),
+enum class Country(val countryName: String) {
+    BRAZIL("Brazil"),
+    GERMANY("Germany"),
+    RUSSIA("Russia"),
+    SPAIN("Spain"),
+    FRANCE("France"),
+    ITALY("Italy"),
+    JAPAN("Japan"),
+    USA("USA"),
+    UKRAINE("Ukraine"),
+    UK("UK"),
+    MEXICO("Mexico"),
+    CHINA("China"),
+    SOUTH_KOREA("South Korea"),
 }
