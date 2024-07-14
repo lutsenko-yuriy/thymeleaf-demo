@@ -15,7 +15,7 @@
     <br><br>
     Country:
     <select th:field="*{country}">
-        <option th:each="country: ${T(com.iurii.thymeleafdemo.model.Country).values()}"
+        <option th:each="country: ${availableCountries}"
                 th:value="${country}"
                 th:text="${country.countryName}" />
     </select>
