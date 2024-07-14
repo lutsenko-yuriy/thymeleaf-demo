@@ -13,6 +13,13 @@
     <br><br>
     Last Name: <input type="text" th:field="*{lastName}" />
     <br><br>
+    Country:
+    <select th:field="*{country}">
+        <option th:each="country: ${T(com.iurii.thymeleafdemo.model.Country).values()}"
+                th:value="${country}"
+                th:text="${country.countryName}" />
+    </select>
+    <br><br>
     <input type="submit" value="Submit">
 </form>
 </body>
