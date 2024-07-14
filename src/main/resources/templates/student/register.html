@@ -9,9 +9,12 @@
 <h3>Registration confirmed</h3>
 
 The student is confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName} + ' from ' + ${student.country.countryName}" />
-<br>
+<br><br>
 Favourite programming language: <span th:text="${student.programmingLanguage.langName}" />
-<br>
-Favourite Operating systems: <span th:text="${#strings.listJoin(student.operatingSystems, ', ')}" />
+<br><br>
+Favourite Operating systems:
+<ul>
+    <li th:each="os: ${student.operatingSystems}" th:text="${os.osName}" />
+</ul>
 </body>
 </html>
